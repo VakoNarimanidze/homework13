@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="input-box">
+        <form action="" method="dialog" id="form1">
+        <label for="value"<b>Enter the radius : </b></label>
+
+        <input type="number" name="num" id="num" <br>
+        <button type="submit" onclick="aoc()">Get Answer</button>
+
+        <p><b>Press Enter or Button to Get Answer</b></p>
+    </form>
+    <b><p class="para" id="sum"></p></b>
+    </div> 
+    
+    <!--JavaScript-->
+    <script type="text/javascript">
+
+        function aoc()
+        {
+            var sum, pie=3.14;
+            r = document.getElementById('num').value;
+            sum = pie*r*r;
+
+            if (r == "" || r <= 0)
+            {
+                alert("Please Enter Radius")
+            }
+            else{
+                document.getElementById('sum').innerHTML=("The Answer of Radius "+r+" is" +sum );
+            }
+        }
+    </script>
+</body>
+</html>
